@@ -1,0 +1,14 @@
+product_id,product_name,brand,package_quantity,package_unit,product_category,from_date,to_date,percentage_of_discount
+P004,iaurt grecesc,Proxi,0.4,kg,lactate,5/8/2025,5/14/2025,9
+P007,ou? m?rimea M,Din Ograd?,10,buc,ou?,5/8/2025,5/14/2025,10
+P020,spaghetti nr.5,Barilla,500,g,paste f?inoase,5/9/2025,5/15/2025,15
+P024,ap? plat?,Aqua Carpatica,2,l,b?uturi,5/10/2025,5/16/2025,7
+P030,ulei floarea-soarelui,Spornic,1,l,alimente de baz?,5/8/2025,5/14/2025,6
+P039,detergent lichid,Dero,2.5,l,produse de menaj,5/9/2025,5/15/2025,18
+P045,hârtie igienic? 3 straturi,Motto,10,role,produse de menaj,5/10/2025,5/16/2025,12
+P051,vin alb demisec,Cotnari,0.75,l,b?uturi,5/8/2025,5/14/2025,10
+P059,morcovi,Generic,0.5,kg,legume ?i fructe,5/9/2025,5/15/2025,5
+P067,orez bob lung,Deroni,1,kg,alimente de baz?,5/10/2025,5/16/2025,8
+P068,iaurt de b?ut,Activia,0.33,kg,lactate,5/8/2025,5/14/2025,10
+P069,past? de din?i,Colgate,100,ml,îngrijire personal?,5/9/2025,5/15/2025,15
+P070,bere blond?,Ursus,0.5,l,b?uturi,5/10/2025,5/16/2025,6

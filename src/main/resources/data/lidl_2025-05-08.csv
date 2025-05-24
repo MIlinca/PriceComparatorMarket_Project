@@ -1,0 +1,26 @@
+product_id,product_name,product_category,brand,package_quantity,package_unit,price,currency
+P001,lapte zuzu,lactate,Zuzu,1,l,9.8,RON
+P002,iaurt grecesc,lactate,Lidl,0.4,kg,11.6,RON
+P005,ou? m?rimea M,ou?,Lidl,10,buc,13.1,RON
+P008,brânz? telemea,lactate,Pilos,0.3,kg,12.9,RON
+P011,pâine alb?,panifica?ie,Lidl,500,g,3.4,RON
+P014,ro?ii cherry,legume ?i fructe,Lidl,250,g,6.9,RON
+P017,piept pui,carne,Lidl,1,kg,28.9,RON
+P020,spaghetti nr.5,paste f?inoase,Barilla,500,g,5.7,RON
+P021,zah?r tos,alimente de baz?,Lidl,1,kg,4.3,RON
+P024,ap? plat?,b?uturi,Aqua Carpatica,2,l,5.1,RON
+P026,banane,legume ?i fructe,Lidl,1,kg,6,RON
+P028,ulei floarea-soarelui,alimente de baz?,Bunica,1,l,9.3,RON
+P031,biscui?i cu unt,gust?ri,Deluxe,0.2,kg,7,RON
+P034,cafea m?cinat?,cafea,Davidoff,0.25,kg,22.6,RON
+P037,detergent lichid,produse de menaj,Persil,2.5,l,49.5,RON
+P040,?ampon p?r gras,îngrijire personal?,Head & Shoulders,400,ml,17.9,RON
+P043,hârtie igienic? 3 straturi,produse de menaj,Zewa,10,role,18.8,RON
+P046,piper negru m?cinat,condimente,Kotanyi,50,g,6.05,RON
+P049,vin alb demisec,b?uturi,Jidvei,0.75,l,23.3,RON
+P052,ciocolat? neagr? 70%,gust?ri,Fin Carre,100,g,3.8,RON
+P055,cartofi albi,legume ?i fructe,Lidl,1,kg,3,RON
+P057,ceap? galben?,legume ?i fructe,Lidl,1,kg,2.8,RON
+P064,m?lai extra,alimente de baz?,Pambac,1,kg,5.5,RON
+P065,file somon,pe?te,Lidl,0.2,kg,25,RON
+P066,crem? de brânz?,lactate,Almette,0.15,kg,8.5,RON
