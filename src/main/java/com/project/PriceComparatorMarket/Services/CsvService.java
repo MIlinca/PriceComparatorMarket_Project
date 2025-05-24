@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.NoSuchElementException;
@@ -39,7 +40,7 @@ public class CsvService {
             store = storeRepository.save(store);
         }
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(csvFile));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(csvFile, StandardCharsets.UTF_8));
         String line;
         boolean firstLine = true;
 
@@ -51,6 +52,7 @@ public class CsvService {
 
             String[] lines = line.split(",");
             Product product = productRepository.findById(lines[0].trim()).orElse(null);
+
             if (product == null) {
                 product = new Product();
                 product.setId(lines[0].trim());
@@ -61,6 +63,7 @@ public class CsvService {
                 product.setPackageUnit(lines[5].trim());
                 productRepository.save(product);
             }
+            System.out.println(product.getName());
 
             Price price = new Price();
             price.setProduct(product);
@@ -80,7 +83,7 @@ public class CsvService {
             store = storeRepository.save(store);
         }
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(csvFile));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(csvFile,StandardCharsets.UTF_8));
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
         boolean firstLine = true;
         String line;

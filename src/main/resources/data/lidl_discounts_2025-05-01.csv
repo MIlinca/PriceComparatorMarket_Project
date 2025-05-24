@@ -1,21 +1,21 @@
 product_id,product_name,brand,package_quantity,package_unit,product_category,from_date,to_date,percentage_of_discount
 P001,lapte zuzu,Zuzu,1,l,lactate,5/1/2025,5/7/2025,10
-P008,brânz? telemea,Pilos,0.3,kg,lactate,5/1/2025,5/7/2025,15
-P020,spaghetti nr.5,Barilla,500,g,paste f?inoase,5/3/2025,5/9/2025,20
-P034,cafea m?cinat?,Davidoff,0.25,kg,cafea,5/4/2025,5/10/2025,12
-P011,pâine alb?,Lidl,500,g,panifica?ie,5/2/2025,5/8/2025,5
-P014,ro?ii cherry,Lidl,250,g,legume ?i fructe,5/2/2025,5/8/2025,8
+P008,branza telemea,Pilos,0.3,kg,lactate,5/1/2025,5/7/2025,15
+P020,spaghetti nr 5,Barilla,500,g,paste fainoase,5/3/2025,5/9/2025,20
+P034,cafea macinata,Davidoff,0.25,kg,cafea,5/4/2025,5/10/2025,12
+P011,paine alba,Lidl,500,g,panificatie,5/2/2025,5/8/2025,5
+P014,rosii cherry,Lidl,250,g,legume si fructe,5/2/2025,5/8/2025,8
 P037,detergent lichid,Persil,2.5,l,produse de menaj,5/6/2025,5/12/2025,25
-P040,?ampon p?r gras,Head & Shoulders,400,ml,îngrijire personal?,5/5/2025,5/11/2025,15
-P049,vin alb demisec,Jidvei,0.75,l,b?uturi,5/1/2025,5/7/2025,10
-P052,ciocolat? neagr? 70%,Fin Carre,100,g,gust?ri,5/3/2025,5/9/2025,18
-P024,ap? plat?,Aqua Carpatica,2,l,b?uturi,5/1/2025,5/7/2025,5
-P005,ou? m?rimea M,Lidl,10,buc,ou?,5/4/2025,5/10/2025,7
+P040,sampon par gras,Head & Shoulders,400,ml,ingrijire personala,5/5/2025,5/11/2025,15
+P049,vin alb demisec,Jidvei,0.75,l,bauturi,5/1/2025,5/7/2025,10
+P052,ciocolata neagra 70%,Fin Carre,100,g,gustari,5/3/2025,5/9/2025,18
+P024,apa plata,Aqua Carpatica,2,l,bauturi,5/1/2025,5/7/2025,5
+P005,oua marimea M,Lidl,10,buc,oua,5/4/2025,5/10/2025,7
 P017,piept pui,Lidl,1,kg,carne,5/2/2025,5/8/2025,6
-P028,ulei floarea-soarelui,Bunica,1,l,alimente de baz?,5/5/2025,5/11/2025,10
-P046,piper negru m?cinat,Kotanyi,50,g,condimente,5/6/2025,5/12/2025,12
-P031,biscui?i cu unt,Deluxe,0.2,kg,gust?ri,5/4/2025,5/10/2025,9
-P043,hârtie igienic? 3 straturi,Zewa,10,role,produse de menaj,5/3/2025,5/9/2025,14
-P026,banane,Lidl,1,kg,legume ?i fructe,5/6/2025,5/12/2025,6
+P028,ulei floarea-soarelui,Bunica,1,l,alimente de baza,5/5/2025,5/11/2025,10
+P046,piper negru macinat,Kotanyi,50,g,condimente,5/6/2025,5/12/2025,12
+P031,biscuiti cu unt,Deluxe,0.2,kg,gustari,5/4/2025,5/10/2025,9
+P043,hartie igienica 3 straturi,Zewa,10,role,produse de menaj,5/3/2025,5/9/2025,14
+P026,banane,Lidl,1,kg,legume si fructe,5/6/2025,5/12/2025,6
 P002,iaurt grecesc,Lidl,0.4,kg,lactate,5/5/2025,5/11/2025,11
-P014,ro?ii cherry,Lidl,250,g,legume ?i fructe,5/6/2025,5/12/2025,5
+P014,rosii cherry,Lidl,250,g,legume si fructe,5/6/2025,5/12/2025,5
