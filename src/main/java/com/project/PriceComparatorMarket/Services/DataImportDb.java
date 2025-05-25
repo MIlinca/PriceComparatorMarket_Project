@@ -16,12 +16,10 @@ public class DataImportDb {
     @Bean
     public CommandLineRunner importCvs(CsvService csvService) {
         return args -> {
-            System.out.println("Starting CSV import...");
             PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
             Resource[] resources = resolver.getResources("classpath:data/*.csv");
-            System.out.println("CSV FILE COUNT: " + resources.length);
 
-            DateTimeFormatter filenameFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); // filename date format
+            DateTimeFormatter filenameFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
             for (Resource resource : resources) {
                 String fileName = resource.getFilename();
@@ -29,7 +27,9 @@ public class DataImportDb {
                     if (fileName.contains("_discounts_")) {
                         String[] line = fileName.split("_discounts_");
                         String store = line[0].trim();
-                        csvService.importCsvDiscount(file, store);
+                        String dateStr = line[1].replace(".csv", "");
+                        LocalDate date = LocalDate.parse(dateStr, filenameFormatter);
+                        csvService.importCsvDiscount(file, store,date);
                     } else {
                         String[] line = fileName.split("_");
                         String store = line[0].trim();
@@ -37,7 +37,6 @@ public class DataImportDb {
                         LocalDate date = LocalDate.parse(dateStr, filenameFormatter);
                         csvService.importCsv(file, store, date);
                     }
-                    System.out.println("Importing file: " + fileName);
                 } catch (Exception e) {
                     System.err.println(" Error importing " + fileName + ": " + e.getMessage());
                 }

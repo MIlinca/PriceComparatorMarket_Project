@@ -21,4 +21,7 @@ public class Alert {
     @Column(nullable = false)
     private double targetPrice;
 
+    @Column(nullable = false)
+    private boolean triggered = false;
+
 }

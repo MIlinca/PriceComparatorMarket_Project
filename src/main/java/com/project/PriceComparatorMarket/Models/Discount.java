@@ -32,4 +32,5 @@ public class Discount {
     @Column(nullable = false)
     private int percentageOfDiscount;
 
+
 }

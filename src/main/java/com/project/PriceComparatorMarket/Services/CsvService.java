@@ -14,7 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.NoSuchElementException;
 
 @Service
@@ -63,7 +62,6 @@ public class CsvService {
                 product.setPackageUnit(lines[5].trim());
                 productRepository.save(product);
             }
-            System.out.println(product.getName());
 
             Price price = new Price();
             price.setProduct(product);
@@ -76,7 +74,7 @@ public class CsvService {
     }
 
     @Transactional
-    public void importCsvDiscount(InputStream csvFile, String storeName) throws IOException {
+    public void importCsvDiscount(InputStream csvFile, String storeName, LocalDate date) throws IOException {
         Store store = storeRepository.findByName(storeName);
         if (store == null) {
             store = new Store(storeName);
@@ -84,13 +82,12 @@ public class CsvService {
         }
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(csvFile,StandardCharsets.UTF_8));
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
         boolean firstLine = true;
         String line;
 
         while ((line = reader.readLine()) != null) {
             if (firstLine) {
-                firstLine = false; // skip header
+                firstLine = false;
                 continue;
             }
 
@@ -102,8 +99,8 @@ public class CsvService {
             Discount discount = new Discount();
             discount.setProduct(product);
             discount.setStore(store);
-            discount.setFromDate(LocalDate.parse(lines[6].trim(), formatter)); // from_date (dd/MM/yyyy)
-            discount.setToDate(LocalDate.parse(lines[7].trim(), formatter));   // to_date (dd/MM/yyyy)
+            discount.setFromDate(LocalDate.parse(lines[6].trim()));
+            discount.setToDate(LocalDate.parse(lines[7].trim()));
             discount.setPercentageOfDiscount(Integer.parseInt(lines[8].trim()));
 
             discountRepository.save(discount);
