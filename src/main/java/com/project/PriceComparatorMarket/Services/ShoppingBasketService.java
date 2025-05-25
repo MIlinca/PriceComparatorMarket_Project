@@ -26,12 +26,15 @@ public class ShoppingBasketService {
     public List<ShoppingListItemDto> optimizeBasket(BasketDto basketDto){
         List<ShoppingListItemDto> shoppingList=new ArrayList<>();
         for(BasketItem item: basketDto.getItems()){
-            Product product=productRepository.findByName(item.getProductName());
+            List<Product> products = productRepository.findByName(item.getProductName());
+            if (products.isEmpty()) throw new NoSuchElementException("No product found!");
+            Product product = products.get(0);
 
             if(product==null)
                 throw new NoSuchElementException("No product found!");
 
-            Price cheapestPrice=priceRepository.findCheapestPrice(product.getId());
+            List<Price> prices = priceRepository.findCheapestPrice(product.getId());
+            Price cheapestPrice=prices.get(0);
             if(cheapestPrice==null)
                 throw new NoSuchElementException("No price found!");
 

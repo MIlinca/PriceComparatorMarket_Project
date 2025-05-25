@@ -12,7 +12,7 @@ import java.util.List;
 public interface PriceRepository extends JpaRepository<Price,Long> {
 
     @Query(value = "SELECT * FROM price WHERE product_id = :productId ORDER BY price ASC LIMIT 1", nativeQuery = true)
-    Price findCheapestPrice(@Param("productId") String product_id);
+    List<Price> findCheapestPrice(@Param("productId") String product_id);
 
     @Query("SELECT p FROM Price p " +
             "WHERE LOWER(TRIM(p.product.name)) = LOWER(TRIM(:productName)) " +

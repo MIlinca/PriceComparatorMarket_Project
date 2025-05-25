@@ -33,7 +33,7 @@ public class DiscountService {
     }
     public List<DiscountDto> getNewDiscount() {
         //LocalDate now = LocalDate.now();
-        LocalDate now = LocalDate.of(2025, 5, 7);
+        LocalDate now = LocalDate.of(2025, 5, 8);
         LocalDate yesterday = now.minusDays(1);
         LocalDate nextDay = now.plusDays(1);
         List<Discount> newDiscounts = discountRepository.findNewDiscounts(yesterday, nextDay);

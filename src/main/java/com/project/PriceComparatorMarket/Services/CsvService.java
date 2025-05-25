@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.NoSuchElementException;
 
 @Service
@@ -82,6 +83,7 @@ public class CsvService {
         }
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(csvFile,StandardCharsets.UTF_8));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
         boolean firstLine = true;
         String line;
 
@@ -99,8 +101,8 @@ public class CsvService {
             Discount discount = new Discount();
             discount.setProduct(product);
             discount.setStore(store);
-            discount.setFromDate(LocalDate.parse(lines[6].trim()));
-            discount.setToDate(LocalDate.parse(lines[7].trim()));
+            discount.setFromDate(LocalDate.parse(lines[6].trim(), formatter));
+            discount.setToDate(LocalDate.parse(lines[7].trim(), formatter));
             discount.setPercentageOfDiscount(Integer.parseInt(lines[8].trim()));
 
             discountRepository.save(discount);
